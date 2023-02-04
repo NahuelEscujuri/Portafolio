@@ -2,13 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Portafolio</title>
+	<title>Nahuel Escujuri</title>
 	<link rel="stylesheet" type="text/css" href="style.css">	
 </head>
 <body>
 
 	<div class="bannerBackground" id="slide">	
 	  <canvas id="canvas"></canvas>
+
 	  <!-- BORRAR y sacar el segundo bucle -->
 	  <canvas id="canvas2"></canvas>
 	</div>
@@ -18,16 +19,16 @@
 		<div class="navegation">
 			<ul class="menu">
 				<li class="menu_item">
-				    <a href="#">About me</a>
+				    <a href="#about">Sobre Mi</a>
 			    </li>
 			    <li class="menu_item">
-				    <a href="#Skills">Skills</a>
+				    <a href="#skills">Habilidades</a>
 			    </li>
 			    <li class="menu_item">
-				    <a href="#">Proyects</a>				
+				    <a href="#proyects">Proyectos</a>				
 			    </li>
 			    <li class="menu_item">
-				    <a href="#">Contacts</a>
+				    <a href="#contact">Contacto</a>
 			    </li>
 			</ul>
 		</ul>
@@ -48,169 +49,46 @@
 		   	  </div>
 		   </div>
     	</div>
-    	<!-- <ul class="sci">
-    		<li><a href="#"><img src="socialRed"></a></li>
-    		<li><a href="#"><img src="socialRed"></a></li>
-    		<li><a href="#"><img src="socialRed"></a></li>
-    	</ul> -->
 	</div>
 
 	<!-- CONTENT -->
-	<div class="bannerContent">
-		<!-- Banner -->
-	<section class="banner" id="home">
-		<img src="IMG/hotel-img.jpg" class="cover backgroundBlur">
-		<div class="contentBx">
-			<h2>Titulo-1</h2>
-			<h4>hotel blog website</h4>
-			<a href="#about" class="btn">About us</a>
+	<div class="sections-container">
+	
+	<!-- Sobre Mi -->
+	<section class="section" id="about">
+		<div class="title">
+			<h2>Sobre Mi</h2>
+			<h4>Background</h4>
+		</div>
+
+		<div class="section_text">
+			<p>
+				Me llamo <b>Nahuel Escujuri</b> soy de Argentina y un Apasionado de la Programación. 
+				Uno de mis mayores hobbies es la creacion ilustraciones tanto en fisico, como en digital, 
+				para hacer este ultimo uso pricipalmente <b>Photoshop</b> Gracias a esta Habilidad 
+				Muy seguido amigos y familiares me an pedido hecer logos y invitaciones de cumpleños. Y mi
+				otro hobbie impotante es la creacion de videojuegos atraves de <b>Unity</b>, actualmente aprovecho
+				cada ratito libre que tengo para poder aportar a un mini proyecto que estoy llevando Adelante  
+			</p>
 		</div>
 	</section>
-	<!-- About Us -->
-	<section class="about" id="about">
+	
+	<!-- Habilidades -->
+	<section class="section" id="about">
 		<div class="title">
-			<h2>About us</h2>
+			<h2>Habilidades</h2>
+			<h4>Tecnicas</h4>
 		</div>
-		<div class="contentBx">
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    	<div class="content">
-	    		<div class="imgBx">
-            		<img src="IMG/hotel-img_2.jpg" class="cover">
-	    		</div>
-     		</div>
-		</div>
+
+		<ul>
+			<li>
+				<img src="./img/JavaScript.jpg" alt="Javasccript">
+				<b>Javasccript</b>
+			</li>
+		</ul>
 	</section>
 
-	<!-- Latest Blog Post -->
-	<section class="post" id="post">
-		<div class="title">
-			<h2>Latest Post</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-		</div>
-		<div class="contentBx">
-			<div class="postColumn">
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox extraHeight">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-			</div>
-			<div class="postColumn">
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox extraHeight">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-			</div>
-			<div class="postColumn">
-				<div class="postBox extraHeight">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-				<div class="postBox">
-					<div class="imgBx">
-						<img src="IMG/hotel-img_post2.jpg" class="cover">
-					</div>
-					<div class="textBx">
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h3>
-						<a href="#" class="btn">Read More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="title">
-			<a href="#" class="btn btn-extra">Read More</a>
-		</div>
-	</section>
+
 	</div>
 
 	<script src="background.js"></script>
