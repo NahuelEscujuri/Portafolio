@@ -15,7 +15,6 @@
 	--white: #fff;
 }
 
-
 html{
 	scroll-behavior: smooth;
 }
@@ -32,6 +31,11 @@ body::-webkit-scrollbar-thumb{
 	background-color: var(--text-color);
 	border-radius: 30px;
 }
+
+
+/* ::selection{
+	background-color: var(--main-color)!important;
+} */
 
 /* BACKGROUND */
 .bannerBackground{
@@ -173,17 +177,22 @@ canvas{
 
 /*// Sections //*/
 .sections-container{
-	margin: 0 15%;
+
 }
 
 .section{
 	/* padding: 60px 0; */
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 0 15%;
 	/* border-bottom: var(--text-color) 2px solid; */
+}
+
+.section.light{
+	background-color: var(--light-color);
 }
 
 /* titulos */
@@ -193,6 +202,7 @@ canvas{
 }
 .title h2{
 	color: var(--main-color);
+	margin-top: 100px;
 	letter-spacing: 1.5px;
 	font-size: 2.8em;
 }
@@ -203,11 +213,12 @@ canvas{
 /* Parrafo */
 .section_text p{
 	text-align: center;
-	letter-spacing: 1.5px;
+	letter-spacing: 2px;
+	/* line-height: .5em; */
 	color: var(--main-color);
 }
 
-/* Listas */
+/* Lista de Habilidades */
 .skill-list{
 	display: flex;
 	justify-content: center;
@@ -219,4 +230,59 @@ canvas{
 	align-items: center;
 	margin: 8px;
 	max-height: 120px;
+}
+
+/* Lista de Proyectos */
+.proyects-list{
+	margin-top: 30px;
+}
+
+.proyects-list li{
+	margin-bottom: 50px;
+	box-shadow: 0 10px 50px #000a;
+}
+.proyects-list li a{
+	display: flex;
+	justify-content: space-between;
+	/* background-color: var(--light-color); */
+	position: relative;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.proyects-list li a:hover{
+	box-shadow: 0 0 0 2px var(--main-color),
+	0 0 50px var(--main-color);
+
+}
+
+.proyects-list li a img{
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	background-color: var(--text-color);
+}
+
+.proyects-list li a .proyects-list_text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	color: var(--text-color);
+	margin: 0 auto;
+}
+
+.proyects-list li a .proyects-list_text h4{
+	color: var(--main-color);
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.proyects-list li a .proyects-list_text p{
+	transition: .3s;
+}
+
+.proyects-list li a:hover .proyects-list_text p{
+	color: var(--main-color);
 }

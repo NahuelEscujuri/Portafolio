@@ -73,7 +73,7 @@ function animate(timeStamp){
     lastTime = timeStamp;
     if (timer > nextFrame){
         ctx.textAlign = "center";
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillStyle = 'rgba(33, 33, 33, 0.1)'; // Alternativa rgba(0, 0, 0, 0.05)
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.font = effect.fontSize + 'px monospace';
         ctx.fillStyle = '#03A062';
