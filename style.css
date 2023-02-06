@@ -54,17 +54,6 @@ canvas{
 	background: var(--dark-color);	
 }
 
-/* .container::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	backdrop-filter: blur(10px);
-	box-shadow: 10px 0 15px rgba(0,0,0,0.05);
-} */
-
 /* NAVBAR */
 .header{
 	z-index: 800;
@@ -224,6 +213,9 @@ canvas{
 	justify-content: center;
 	flex-wrap: wrap;
 }
+.skill-list li{
+	margin: 0 13px 13px 0;
+}
 .skill-list img{
 	display: flex;
 	justify-content: center;
@@ -234,7 +226,7 @@ canvas{
 
 /* Lista de Proyectos */
 .proyects-list{
-	margin-top: 30px;
+	margin: 30px 0 70px 0;
 }
 
 .proyects-list li{
@@ -285,4 +277,32 @@ canvas{
 
 .proyects-list li a:hover .proyects-list_text p{
 	color: var(--main-color);
+}
+
+/* Lista de Contacto */
+.contact-list{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.contact-list a{
+	box-shadow: 0 10px 50px #000a;
+	border-radius: 100px;
+}
+
+.fa{
+	font-size: 6em!important;
+	color: var(--text-color);
+	border-radius: 100px;
+	padding: 35px;
+	cursor: pointer;
+	transition: .15s;
+}
+
+.fa:hover{
+	color: var(--main-color);
+	box-shadow: 0 0 0 2px var(--main-color),
+	0 0 50px var(--main-color);
 }
