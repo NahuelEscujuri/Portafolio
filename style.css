@@ -340,3 +340,11 @@ canvas{
 	box-shadow: 0 0 0 2px var(--main-color),
 	0 0 50px var(--main-color);
 }
+
+/* Responsive */
+@media (max-width: 800px){
+	.container{
+		height: 50%;
+		margin: 0 auto;
+	}
+}
