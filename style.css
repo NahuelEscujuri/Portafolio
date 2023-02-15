@@ -17,6 +17,7 @@
 
 html{
 	scroll-behavior: smooth;
+	/* position: absolute; */
 }
 
 body{
@@ -342,9 +343,22 @@ canvas{
 }
 
 /* Responsive */
-@media (max-width: 700px){
+@media (max-width: 768px){
+	html{
+	}
 	.container{
-		height: 50%;
+		height: 100%;
+		width: 100%;
 		margin: 0 auto;
+	}
+
+	.container .content .bannerText div{
+		align-items: center;
+		text-align: center;
+	}
+	
+	/* Lista de Contacto */
+	.contact-list{
+		flex-direction: column;
 	}
 }
