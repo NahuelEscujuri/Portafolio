@@ -23,6 +23,7 @@ html{
 body{
 	background: var(--dark-color);
 	overflow-x: hidden;
+	position: absolute;
 }
 body::-webkit-scrollbar{
 	background-color: transparent;
@@ -40,7 +41,6 @@ body::-webkit-scrollbar-thumb{
 
 /* BACKGROUND */
 .bannerBackground{
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb{
 canvas{
 	position: absolute;
 	z-index: -1;
+	width: 100%;
 }
 #canvas{
 	background: var(--dark-color);	
@@ -343,9 +344,8 @@ canvas{
 }
 
 /* Responsive */
-@media (max-width: 768px){
-	html{
-	}
+@media (max-width: 1060px){
+
 	.container{
 		height: 100%;
 		width: 100%;
