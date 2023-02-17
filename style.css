@@ -75,7 +75,9 @@ canvas{
 	display: flex;
 	justify-content: center;
 }
-
+.menu-icon{
+	display: none;
+}
 .menu{
 	position: relative;
 	display: flex;
@@ -384,6 +386,59 @@ canvas{
 		align-items: center;
 		text-align: center;
 	}
+
+	/* Nav */
+	.menu-icon{
+		z-index: 810;
+		user-select: none;
+		display: flex;
+		font-size: 40px;
+		height: 100%;
+		transform: rotate(180deg);
+		cursor: pointer;
+		color: var(--main-color);
+		margin-top: 4.5px;
+		align-items: center;
+		transition: .3s;
+	}
+	.menu-icon.active{
+		transform: rotate(0deg);
+	}
+
+	.navegation{
+		width: 40px;
+		height:82%;
+		background-color: var(--light-color);
+		box-shadow: 0 0 5px var(--main-color);
+		border: var(--main-color) 2px solid;
+		border-radius: 100px;
+		margin-top: 4px;
+		overflow: hidden;
+		position: absolute;
+		transition: .3s .15s;
+	}
+	.navegation.active{
+		width: 110%;
+		height: 110vh;
+		/* border-top: none; */
+		border-radius: 0;
+	}
+
+	.menu{
+		flex-direction: column;
+		align-items: center;
+		width: 100vh;
+		height: 100vh;
+	}
+	
+	.menu_item{
+		width: 100%;
+	}
+	.menu_item a{
+		padding: 23px;
+		text-align: center;
+		width: 100%;
+	}
 	
 	/* Lista de Proyectos */
 	.proyects-list li{
@@ -406,7 +461,7 @@ canvas{
 	}
 	.proyects-list li .proyects-list_text .proyects-list_text-links{
 		flex-direction: column;
-		margin-top: 43px;
+		margin-top: 28px;
 	}
 	
 	.proyects-list li .proyects-list_text .proyects-list_text-links a{
