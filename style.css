@@ -399,7 +399,7 @@ canvas{
 		color: var(--main-color);
 		margin-top: 4.5px;
 		align-items: center;
-		transition: .3s;
+		transition: .35s;
 	}
 	.menu-icon.active{
 		transform: rotate(0deg);
@@ -409,13 +409,12 @@ canvas{
 		width: 40px;
 		height:82%;
 		background-color: var(--light-color);
-		box-shadow: 0 0 5px var(--main-color);
 		border: var(--main-color) 2px solid;
 		border-radius: 100px;
 		margin-top: 4px;
 		overflow: hidden;
 		position: absolute;
-		transition: .3s .15s;
+		transition: .3s;
 	}
 	.navegation.active{
 		width: 110%;
