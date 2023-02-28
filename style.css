@@ -253,6 +253,15 @@ canvas{
 }
 .skill-list li{
 	margin: 0 13px 13px 0;
+	cursor: default;
+}
+.skill-list li p{
+	background-color: var(--main-color);
+	padding: 14px 17px;
+	border-radius: 5px;
+	font-size: 1.2em;
+	font-weight: 1000;
+	text-transform: uppercase;
 }
 .skill-list img{
 	display: flex;
