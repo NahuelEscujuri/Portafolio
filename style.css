@@ -14,6 +14,9 @@
 	--text-color: #0D7377;
 	--white: #fff;
 }
+.swiper-button-next,.swiper-button-prev{
+  color: red !important;
+}
 
 html{
 	scroll-behavior: smooth;
@@ -249,7 +252,7 @@ canvas{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-bottom: 60px;
+	margin-bottom: 100px;
 }
 .skill-list li{
 	margin: 0 13px 13px 0;
@@ -274,7 +277,7 @@ canvas{
 
 /* Lista de Proyectos */
 .proyects-list{
-	margin: 30px 0 70px 0;
+	margin: 10px 0 70px 0;
 }
 
 .proyects-list li{
