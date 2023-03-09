@@ -259,9 +259,11 @@ canvas{
 	cursor: default;
 }
 .skill-list li p{
-	background-color: var(--main-color);
+	/* background-color: var(--main-color); */
+	color: var(--main-color);
 	padding: 14px 17px;
 	text-align: center;
+	border: var(--main-color) 2px solid;
 	border-radius: 5px;
 	font-size: 1.2em;
 	font-weight: 1000;
@@ -490,5 +492,11 @@ canvas{
 
 	.contact-list a{
 		margin: 12px auto;
+	}
+}
+
+@media (max-width: 447px){
+	.skill-list .skill-list_text{
+		width: 100%;
 	}
 }
