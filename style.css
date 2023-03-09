@@ -468,6 +468,9 @@ canvas{
 		width: 100%;
 	}
 
+	.proyects-list li .proyects-list_text h4{
+		text-transform: uppercase;
+	}
 	.proyects-list li .proyects-list_text p{
 		color: var(--main-color);
 	}
