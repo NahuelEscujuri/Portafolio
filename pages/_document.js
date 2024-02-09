@@ -5,10 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
       </Head>
-      {/* <body className='bg-gray_light'>
-      </body> */}
+      <body>
         <Main />
         <NextScript />
+      </body>
     </Html>
   )
 }
