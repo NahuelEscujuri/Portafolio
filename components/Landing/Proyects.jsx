@@ -35,8 +35,8 @@ export default function Proyects(){
                                             <Image
                                             src={Seller}
                                             alt="3DSeller"
-                                            objectFit="cover"
-                                            layout="fill"
+                                            // objectFit="cover"
+                                            // layout="fill"
                                             priority
                                             />
                                         </div>
@@ -62,8 +62,8 @@ export default function Proyects(){
                                             <Image
                                             src={Food}
                                             alt="PI Food"
-                                            objectFit="cover"
-                                            layout="fill"
+                                            // objectFit="cover"
+                                            // layout="fill"
                                             priority
                                             />
                                         </div>
