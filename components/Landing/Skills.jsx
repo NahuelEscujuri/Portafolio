@@ -1,22 +1,4 @@
 import Image from "next/image";
-import JavascriptIcon from "../../public/technologies/Javascript.png"
-import HTMLIcon from "../../public/technologies/HTML.png"
-import CSSIcon from "../../public/technologies/CSS.png"
-import ReactIcon from "../../public/technologies/React.png"
-import NodeIcon from "../../public/technologies/Node.png"
-import PostgreSQLIcon from "../../public/technologies/PostgreSQL.png"
-import TypescriptIcon from "../../public/technologies/Typescript.png"
-import CIcon from "../../public/technologies/C.png"
-import NextIcon from "../../public/technologies/Next.png"
-import ExpressIcon from "../../public/technologies/express.png"
-import SequelizeIcon from "../../public/technologies/sequelize.png"
-import SQLIcon from "../../public/technologies/SQL.png"
-import MongoIcon from "../../public/technologies/mongo.png"
-import PythonIcon from "../../public/technologies/Python.png"
-import DjangoIcon from "../../public/technologies/Django.png"
-import FigmaIcon from "../../public/technologies/figma.png"
-import TailwindIcon from "../../public/technologies/tailwind.png"
-import PhotoshopIcon from "../../public/technologies/Photoshop.png"
 import Window from "./UIElements/Window";
 import { useEffect, useRef, useState } from "react";
 
