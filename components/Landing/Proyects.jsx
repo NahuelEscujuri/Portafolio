@@ -61,7 +61,7 @@ export default function Proyects(){
                                 <WindowProyect
                                 title={"Blends Burger"}
                                 date={"November 2023"}
-                                img={"/proyects/blendburger.png"}
+                                img={"/proyects/blendBurger.png"}
                                 description={"desarrollamos una aplicación para optimizar la gestión de pedidos y repartidores. Mi responsabilidad principal fue diseñar y desarrollar la aplicación desde cero, permitiendo a los dueños del local marcar pedidos directamente en un mapa y asignar repartidores de manera eficiente. Implementé funcionalidades como un sistema de asignación de repartidores junto a los puntos de reparto."}
                                 // deploy={"https://3dseller.vercel.app/"}
                                 // repository={"https://github.com/aliriodi/3DSeller"}
