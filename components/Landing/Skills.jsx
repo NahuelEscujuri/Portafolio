@@ -15,19 +15,46 @@ import MongoIcon from "../../public/technologies/mongo.png"
 import PythonIcon from "../../public/technologies/Python.png"
 import DjangoIcon from "../../public/technologies/Django.png"
 import FigmaIcon from "../../public/technologies/figma.png"
+import TailwindIcon from "../../public/technologies/tailwind.png"
+import PhotoshopIcon from "../../public/technologies/Photoshop.png"
+import Window from "./UIElements/Window";
+import { useEffect, useRef, useState } from "react";
 
 
-export default function Skills(){
+export default function Skills(){    
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    // const offset = position; 
+    const [position, setPosition] = useState({ left: 0, top: 0 });
+    const elementRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        const { left, top } = elementRef.current.getBoundingClientRect();
+        setPosition({ left, top });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Limpia el event listener cuando el componente se desmonta
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Solo se ejecuta una vez al montar el componente
+
     return(
-        <section className="section " id="skills">
+        <section
+        ref={elementRef}
+		onMouseMove={(event) => setMousePosition({ x: event.clientX, y: event.clientY })} 
+		className="section skills relative h-[1500px] overflow-hidden
+		sm:min-h-[1500px] sm:h-auto"
+		id="skills">
 
-		
-        {/* Habilidades Blandas */}
-		
-		<div className="title">
-			<h2>HABILIDADES</h2>
-			<h4>Blandas</h4>
-		</div>
+			{/* Habilidades Blandas */}
+			
+			<div className="title">
+				<h2>HABILIDADES</h2>
+				<h4>Blandas</h4>
+			</div>
 
 		<ul className="skill-list">
 			{/* Auto motivación */}
@@ -64,88 +91,156 @@ export default function Skills(){
 		<div className="title">
 			<h4>Tecnicas</h4>
 		</div>
-
+		
+		{/* Ventanas de habilidades tecnicas */}
 		<ul className="skill-list">
-			{/* Javascript */}
-			<li>
-				<Image width={100} height={100} src={JavascriptIcon} alt="Javasccript" title="Javasccript"/>
-			</li>
 			
-			{/* HTML */}
-			<li>
-				<Image width={100} height={100} src={HTMLIcon} alt="HTML" title="HTML"/>
-			</li>
+			{/* Lenguajes de Programación y Frameworks */}
+			<Window
+			initialPosition={{x:"10", y:"35"}}
+			title={"{} Lenguajes de Programación"}
+			mousePosition={{x:mousePosition.x, y:mousePosition.y - position.top}}>
+				<ul className="flex">
+					
+					{/* C */}
+					<li>
+						<Image width={100} height={100} src={CIcon} alt="C#" title="C#"/>
+					</li>
+					
+					{/* Python */}
+					<li>
+						<Image width={100} height={100} src={PythonIcon} alt="MongoDB" title="MongoDB"/>
+					</li>
+					
+					{/* Javascript */}
+					<li>
+						<Image width={100} height={100} src={JavascriptIcon} alt="Javasccript" title="Javasccript"/>
+					</li>
+					
+					{/* Typescript */}
+					<li>
+						<Image width={100} height={100} src={TypescriptIcon} alt="Typescript" title="Typescript"/>
+					</li>
+				</ul>
+			</Window>
+
 			
-			{/* CSS */}
-			<li>
-				<Image width={100} height={100} src={CSSIcon} alt="CSS" title="CSS"/>
-			</li>
+			{/* Frontend */}
+			<Window
+			initialPosition={{x:"20", y:"45"}}
+			title={"</> Frontend"}
+			mousePosition={{x:mousePosition.x, y:mousePosition.y - position.top}}>
+				<ul className="flex">
+					
+					{/* React */}
+					<li>
+						<Image width={100} height={100} src={ReactIcon} alt="React" title="React"/>
+					</li>
+					
+					{/* Next */}
+					<li>
+						<Image width={100} height={100} src={NextIcon} alt="Next" title="Next"/>
+					</li>
+
+					{/* TailWind */}
+					<li>
+						<Image width={100} height={100} src={TailwindIcon} alt="TailWind" title="TailWind"/>
+					</li>
+
+					{/* CSS */}
+					<li>
+						<Image width={100} height={100} src={CSSIcon} alt="CSS" title="CSS"/>
+					</li>
+
+				</ul>
+			</Window>
+
 			
-			{/* React */}
-			<li>
-				<Image width={100} height={100} src={ReactIcon} alt="React" title="React"/>
-			</li>
+			{/* Backend */}
+			<Window
+			icon={"b"}
+			initialPosition={{x:"30", y:"55"}}
+			title={" Backend"}
+			mousePosition={{x:mousePosition.x, y:mousePosition.y - position.top}}>
+				<ul className="flex">
+					
+					{/* Node */}
+					<li>
+						<Image width={100} height={100} src={NodeIcon} alt="Node" title="Node"/>
+					</li>
+					
+					{/* Express */}
+					<li>
+						<Image width={100} height={100} src={ExpressIcon} alt="Express" title="Express"/>
+					</li>
+					
+					{/* Django */}
+					<li>
+						<Image width={100} height={100} src={DjangoIcon} alt="MongoDB" title="MongoDB"/>
+					</li>			
+					
+					{/* Sequelize */}
+					<li>
+						<Image width={100} height={100} src={SequelizeIcon} alt="Sequelize" title="Sequelize"/>
+					</li>
+
+				</ul>
+			</Window>
+
+						
+			{/* Base de Datos */}
+			<Window
+			icon={"db"}
+			initialPosition={{x:"40", y:"65"}}
+			title={" Bases de Datos"}
+			mousePosition={{x:mousePosition.x, y:mousePosition.y - position.top}}>
+				<ul className="flex">	
+					
+					{/* PostgreSQL */}
+					<li>
+						<Image width={100} height={100} src={PostgreSQLIcon} alt="PostgreSQL" title="PostgreSQL"/>
+					</li>
+										
+					{/* SQL */}
+					<li>
+						<Image width={100} height={100} src={SQLIcon} alt="SQL" title="SQL"/>
+					</li>
+					
+					{/* MongoDB */}
+					<li>
+						<Image width={100} height={100} src={MongoIcon} alt="MongoDB" title="MongoDB"/>
+					</li>
+
+				</ul>
+			</Window>
+
+
+			{/* Herramientas de Diseño */}
+			<Window
+			icon={"hd"}
+			initialPosition={{x:"50", y:"75"}}
+			title={" Herramientas de Diseño"}
+			mousePosition={{x:mousePosition.x, y:mousePosition.y - position.top}}>
+				<ul className="flex">	
+					
+					{/* Figma */}
+					<li>
+						<Image width={100} height={100} src={FigmaIcon} alt="Figma" title="Figma"/>
+					</li>
+					
+					{/* Photoshop */}
+					<li>
+						<Image width={100} height={100} src={PhotoshopIcon} alt="Photoshop" title="Photoshop"/>
+					</li>
+
+				</ul>
+			</Window>
 			
-			{/* Node */}
-			<li>
-				<Image width={100} height={100} src={NodeIcon} alt="Node" title="Node"/>
-			</li>
+
 			
-			{/* PostgreSQL */}
-			<li>
-				<Image width={100} height={100} src={PostgreSQLIcon} alt="PostgreSQL" title="PostgreSQL"/>
-			</li>
-			
-			{/* Typescript */}
-			<li>
-				<Image width={100} height={100} src={TypescriptIcon} alt="Typescript" title="Typescript"/>
-			</li>
-			
-			{/* C */}
-			<li>
-				<Image width={100} height={100} src={CIcon} alt="C#" title="C#"/>
-			</li>
-			
-			{/* Next */}
-			<li>
-				<Image width={100} height={100} src={NextIcon} alt="Next" title="Next"/>
-			</li>
-			
-			{/* Express */}
-			<li>
-				<Image width={100} height={100} src={ExpressIcon} alt="Express" title="Express"/>
-			</li>
-			
-			{/* Sequelize */}
-			<li>
-				<Image width={100} height={100} src={SequelizeIcon} alt="Sequelize" title="Sequelize"/>
-			</li>
-			
-			{/* SQL */}
-			<li>
-				<Image width={100} height={100} src={SQLIcon} alt="SQL" title="SQL"/>
-			</li>
-			
-			{/* MongoDB */}
-			<li>
-				<Image width={100} height={100} src={MongoIcon} alt="MongoDB" title="MongoDB"/>
-			</li>
-			
-			{/* Python */}
-			<li>
-				<Image width={100} height={100} src={PythonIcon} alt="MongoDB" title="MongoDB"/>
-			</li>
-			
-			{/* Django */}
-			<li>
-				<Image width={100} height={100} src={DjangoIcon} alt="MongoDB" title="MongoDB"/>
-			</li>
-			
-			{/* Figma */}
-			<li>
-				<Image width={100} height={100} src={FigmaIcon} alt="Figma" title="Figma"/>
-			</li>
 		</ul>
+
+		{/* <div className="absolute border-t-2 border-b-2 border-main w-full bottom-0 left-0 h-[50px]"></div> */}
 	</section>
     )
 }

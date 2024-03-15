@@ -20,11 +20,12 @@ const config: Config = {
         text:"#0D7377",
       }
     },
-  },
-  screens: {
-    'lm': {'min':'1024px'},
-    'lg': {'max':'1024px'},
-    'md': {'max': '768px'},
+    screens: {
+      'lm': {'min':'1024px'},
+      'lg': {'max':'1024px'},
+      'md': {'max': '768px'},
+      'sm': {'max':'500px'}
+    }
   },
   plugins: [],
 }

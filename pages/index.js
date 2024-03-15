@@ -36,7 +36,7 @@ export default function Landing(){
 
             {/* Habilidades */}
             <Skills/>
-
+            
             {/* Proyectos */}
             <Proyects/>
 

@@ -7,7 +7,9 @@ export default function NavBar(){
 
             <p onClick={()=> setOpenMenu(!openMenu)} className={`menu-icon ${openMenu && "active"}`} id="menu-icon">▲</p>
 
-            <div className={`navegation ${openMenu && "active"}`}>
+            <div
+            onClick={()=>setOpenMenu(false)}
+            className={`navegation ${openMenu && "active"}`}>
 
                 <ul className="menu">
 

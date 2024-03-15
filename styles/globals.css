@@ -215,6 +215,10 @@ h4{
 	/* border-bottom: var(--text-color) 2px solid; */
 }
 
+.section.skills{
+	justify-content: flex-start;
+}
+
 .section.light{
 	background-color: var(--light-color);
 }
@@ -365,12 +369,19 @@ h4{
 	margin-top: 50px;
 }
 
-.contact-list a{
-	box-shadow: 0 10px 50px #000a;
-	border-radius: 100px;
+.contact-list a:hover{
+	box-shadow:
+	 0 0 5px var(--main-color),
+	 0 0 20px var(--main-color),
+	 0 0 40px var(--main-color);
 }
 
-.contact-list .fa{
+.contact-list a:hover p,
+.contact-list a:hover .fa{
+	color: var(--main-color);
+}
+
+/* .contact-list .fa{
 	font-size: 6em!important;
 	color: var(--text-color);
 	border-radius: 100px;
@@ -383,11 +394,11 @@ h4{
 	color: var(--main-color);
 	box-shadow: 0 0 0 2px var(--main-color),
 	0 0 50px var(--main-color);
-}
+} */
 
 /* Swiper */
 .swiper{
-	overflow: hidden;
+	/* overflow-y: hidden; */
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -616,17 +627,31 @@ canvas{
 
 	/* Lista de Contacto */
 	.contact-list{
+		width: fit-content;
 		flex-direction: column;
 	}
 
-	.contact-list a{
+	/* .contact-list a{
 		margin: 12px auto;
-	}
+	} */
 }
 
 @media (max-width: 800px){
 	.swiper-slide li{
 	  margin: 0 5%;   
+	}
+
+	
+	/*// Sections //*/
+	.section{
+		padding: 0 25px;
+	}
+}
+
+@media (max-width: 500px){
+	.skill-list img{
+		height: 59px;
+		width: 59px;  
 	}
 }
 
