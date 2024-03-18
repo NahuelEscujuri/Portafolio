@@ -22,7 +22,7 @@ const config: Config = {
     },
     screens: {
       'lm': {'min':'1024px'},
-      'lg': {'max':'1024px'},
+      'lg': {'max':'1060px'},
       'md': {'max': '768px'},
       'sm': {'max':'500px'}
     }
