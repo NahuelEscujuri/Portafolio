@@ -8,7 +8,7 @@ import Skills from "../components/Landing/Skills";
 import { useEffect, useState } from "react";
 
 export default function Landing(){
-    const [innerWidth, setInnerWidth] = useState(false)
+    const [innerWidth, setInnerWidth] = useState(null)
     const [currentTyping, setCurrentTyping] = useState(0)
     const typing = "Nahuel Escujuri"
     
@@ -49,7 +49,7 @@ export default function Landing(){
                                         {/* Titulo en el responsive */}
                                         <h2
                                         style={{color:"var(--color-main)"}}>
-                                            {typing?.slice(0, currentTyping)}{currentTyping != typing?.length && innerWidth <= 1060 && "|"}
+                                            {typing?.slice(0, currentTyping)}{currentTyping != typing?.length && innerWidth !=null && innerWidth <= 1060 && "|"}
                                         </h2>
 
                                         <h4 className=" opacity-0" >Full Stack Developer</h4>
