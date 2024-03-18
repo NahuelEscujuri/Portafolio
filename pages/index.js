@@ -8,13 +8,12 @@ import Skills from "../components/Landing/Skills";
 import { useEffect, useState } from "react";
 
 export default function Landing(){
-    
+    const [innerWidth, setInnerWidth] = useState(false)
     const [currentTyping, setCurrentTyping] = useState(0)
     const typing = "Nahuel Escujuri"
     
     useEffect(() => {
         if(window.innerWidth <= 1060){
-
             // Actualiza el fotograma de la animación cada 500ms
             const interval = setInterval(() => {
       
@@ -25,6 +24,10 @@ export default function Landing(){
             return () => clearInterval(interval);
         }
     }, [currentTyping]);
+
+    useEffect(()=>{
+        setInnerWidth(window?.innerWidth)
+    },[])
 
     return(
         <>
@@ -46,7 +49,7 @@ export default function Landing(){
                                         {/* Titulo en el responsive */}
                                         <h2
                                         style={{color:"var(--color-main)"}}>
-                                            {typing?.slice(0, currentTyping)}{currentTyping != typing?.length && "|"}
+                                            {typing?.slice(0, currentTyping)}{currentTyping != typing?.length && innerWidth <= 1060 && "|"}
                                         </h2>
 
                                         <h4 className=" opacity-0" >Full Stack Developer</h4>
