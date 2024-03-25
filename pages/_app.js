@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App({ Component, pageProps }) {
   return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
         {/* <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet"/> */}
       </Head>
       <Component {...pageProps} />
+      <SpeedInsights/>
     </>
   )
 }
